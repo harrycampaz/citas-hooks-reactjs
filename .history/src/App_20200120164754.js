@@ -31,6 +31,7 @@ function App() {
   const titulo = Object.keys(citas).length === 0 ? "No hay citas" : "Administrar Citas";
 
   useEffect(()=> {
+
      let citasStore = JSON.parse(localStorage.getItem('citas'));
 
      if(citasStore){

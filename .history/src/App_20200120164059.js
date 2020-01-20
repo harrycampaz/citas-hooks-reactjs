@@ -5,12 +5,7 @@ import Cita from './components/Cita';
 
 function App() {
 
-  let citasInin = JSON.parse(localStorage.getItem('citas'));
-
-  if(!citasInin) {
-    citasInin = [];
-  }
-  const [citas, setCitas] = useState(citasInin);
+  const [citas, setCitas] = useState([]);
 
   const createCita = cita => {
     const nuevasCitas = [...citas, cita]
@@ -31,15 +26,9 @@ function App() {
   const titulo = Object.keys(citas).length === 0 ? "No hay citas" : "Administrar Citas";
 
   useEffect(()=> {
-     let citasStore = JSON.parse(localStorage.getItem('citas'));
-
-     if(citasStore){
-       localStorage.setItem('citas', JSON.stringify(citas));
-     }else {
-       localStorage.setItem('citas', JSON.stringify([]));
-     }
-  
-}, [citas])
+    console.log("nomb  ren");
+    
+  })
 
   return (
     <Fragment>
